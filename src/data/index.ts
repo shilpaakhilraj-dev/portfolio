@@ -3,6 +3,15 @@ import type { Project, ExperienceItem, SkillGroup } from "../types/types";
 
 export const PROJECTS: Project[] = [
   {
+    tag: "Full Stack · Angular + Python (FastAPI)",
+    title: "Weather Forecast App",
+    desc: "Full-stack weather application with Angular frontend and FastAPI backend. Integrates geocoding and Open-Meteo APIs to fetch 7-day forecasts. Features REST API design, CLI support, and responsive UI with unit conversion.",
+    stack: ["Angular", "FastAPI", "Python", "REST API", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/shilpaakhilraj-dev",
+    demo: "https://shilpaakhilraj-dev.github.io/weather_app_frontend/",
+    color: "#4dffd2",
+  },
+  {
     tag: "Angular · State Mgmt",
     title: "CRUD with Angular Signals",
     desc: "Modern Angular CRUD app leveraging the new Signals API for fine-grained reactivity. Features standalone components, promise-based async workflows, and a reusable UI component library.",
@@ -73,14 +82,19 @@ export const EXPERIENCE: ExperienceItem[] = [
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {
-    label: "Frameworks",
+    label: "Frontend",
     accent: "#7c6fff",
-    chips: ["Angular v7–v19", "React", "RxJS", "Signals"],
+    chips: ["Angular", "TypeScript", "RxJS", "Signals", "HTML", "CSS", "Tailwind CSS"],
   },
   {
-    label: "Languages",
-    accent: "#4dffd2",
-    chips: ["TypeScript", "JavaScript (ES2024)", "HTML5", "CSS3"],
+    label: "Backend",
+    accent: "#4dabf7",
+    chips: ["Python", "FastAPI", "REST API Design"],
+  },
+  {
+    label: "Architecture",
+    accent: "#ff922b",
+    chips: ["Microfrontends (Nx)", "Component Architecture", "State Management", "Reactive Programming"],
   },
   {
     label: "Visualizations",
@@ -88,9 +102,9 @@ export const SKILL_GROUPS: SkillGroup[] = [
     chips: ["D3.js", "Chart.js", "Highcharts"],
   },
   {
-    label: "Styling",
-    accent: "#ff6b9d",
-    chips: ["Tailwind CSS", "Bootstrap", "SCSS/SASS", "CSS Animations"],
+    label: "Cloud & DevOps",
+    accent: "#20c997",
+    chips: ["AWS S3", "AWS EC2", "AWS Lambda", "Google Cloud Platform (GCP)"],
   },
   {
     label: "Testing",
@@ -98,14 +112,14 @@ export const SKILL_GROUPS: SkillGroup[] = [
     chips: ["Jest", "Angular TestBed"],
   },
   {
-    label: "Tools",
-    accent: "#ffc46b",
-    chips: ["Git & GitHub","Jenkins", "CI/CD", "Webpack", "Vite"],
-  },
-  {
     label: "Methodologies & Practices",
     accent: "#ff846b",
-    chips: ["Agile/Scrum", "Performance Optimization","WCAG standards", "Clean Code"],
+    chips: ["Agile/Scrum", "Performance Optimization", "WCAG Standards", "Clean Code"],
+  },
+  {
+    label: "Tools",
+    accent: "#f06595",
+    chips: ["Git", "GitHub", "Postman", "VS Code"],
   },
 ];
 
@@ -120,6 +134,8 @@ export const NAV_LINKS = [
 export const HERO_TITLES = [
   "Frontend Engineer",
   "Angular Specialist",
+  "Full-Stack Developer (Angular + Python)",
+  "Python API Developer (FastAPI)",
   "UI Craftsperson",
   "Microfrontend Architect (Nx)", 
   "Reactive Programming Enthusiast",
@@ -155,11 +171,11 @@ export const CONTACT_LINKS = [
     href: "https://github.com/shilpaakhilraj-dev",
     color: "var(--text)",
   },
-  {
-    icon: "☎",
-    label: "Phone",
-    value: "+91 6382403094",
-    href: "tel:+916382403094",
-    color: "#4dffd2",
-  },
+  // {
+  //   icon: "☎",
+  //   label: "Phone",
+  //   value: "+91 6382403094",
+  //   href: "tel:+916382403094",
+  //   color: "#4dffd2",
+  // },
 ];

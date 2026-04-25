@@ -6,7 +6,7 @@
 // To wire up real form submission, replace the setTimeout in handleSubmit
 // with your preferred service (EmailJS, Formspree, Resend, etc.)
 
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 import AnimatedSection from "./AnimatedSection";
 import SectionHeader from "./SectionHeader";
 import { CONTACT_LINKS } from "../data";
@@ -24,18 +24,37 @@ export default function Contact() {
   //   EmailJS  → emailjs.sendForm(...)
   //   Formspree → fetch("https://formspree.io/f/YOUR_ID", { method:"POST", body: formData })
   //   Resend   → your own API route
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    if (!form.name || !form.email || !form.message) return;
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    setStatus("sending");
-    
-    setTimeout(() => {
+  if (!form.name || !form.email || !form.message) return;
+
+  setStatus("sending");
+
+  try {
+    const response = await fetch("https://formspree.io/f/mgorqwon", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      }),
+    });
+
+    if (response.ok) {
       setStatus("sent");
       setForm({ name: "", email: "", message: "" });
       setTimeout(() => setStatus("idle"), 4000);
-    }, 1200);
-  };
+    } else {
+      setStatus("error");
+    }
+  } catch {
+    setStatus("error");
+  }
+};
 
   // ── Dynamic input border on focus ────────────────────────────────────────
   const inputStyle = (field: string): React.CSSProperties => ({
