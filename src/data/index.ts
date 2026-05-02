@@ -3,6 +3,15 @@ import type { Project, ExperienceItem, SkillGroup } from "../types/types";
 
 export const PROJECTS: Project[] = [
   {
+    tag: "Full Stack · React + Python (FastAPI)",
+    title: "Real-Time Chat Application",
+    desc: "Full-stack real-time chat application built with React and FastAPI. Implements WebSocket-based messaging, JWT authentication, and MongoDB for scalable data storage. Features include real-time messaging, online/offline presence tracking, last seen timestamps, and read receipts.",
+    stack: ["React", "FastAPI", "Python", "WebSockets", "MongoDB", "JWT", "Context API"],
+    github: "https://github.com/shilpaakhilraj-dev",
+    demo: "https://chat-app-frontend-khaki-psi.vercel.app/login",
+    color: "#ffc46b",
+  },
+  {
     tag: "Full Stack · Angular + Python (FastAPI)",
     title: "Weather Forecast App",
     desc: "Full-stack weather application with Angular frontend and FastAPI backend. Integrates geocoding and Open-Meteo APIs to fetch 7-day forecasts. Features REST API design, CLI support, and responsive UI with unit conversion.",
@@ -84,12 +93,12 @@ export const SKILL_GROUPS: SkillGroup[] = [
   {
     label: "Frontend",
     accent: "#7c6fff",
-    chips: ["Angular", "TypeScript", "RxJS", "Signals", "HTML", "CSS", "Tailwind CSS"],
+    chips: ["Angular", "React", "TypeScript", "RxJS", "Signals", "HTML", "CSS", "Tailwind CSS"],
   },
   {
     label: "Backend",
     accent: "#4dabf7",
-    chips: ["Python", "FastAPI", "REST API Design"],
+    chips: ["Python", "FastAPI", "MongoDB", "WebSockets", "JWT", "REST API Design"],
   },
   {
     label: "Architecture",
